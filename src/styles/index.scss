@@ -1,0 +1,43 @@
+@import "~bootstrap/scss/bootstrap";
+@import 'variables';
+@import 'mixins';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: cadetblue;
+}
+
+.header-b {
+  background-color: $sec-color;
+}
+
+.logo-b {
+  @include rem(17);
+  font-family: 'Roboto Slab', serif;
+
+  &__highlight {
+    color: $pr-color;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    @include rem(14);
+    font-family: 'Roboto', serif;
+    color: $sec-color-3;
+  }
+}
+
+.phone-b {
+  @include rem(15);
+}
+
+.top-b {
+  @include rem(17);
+  background-color: $sec-color-2;
+
+  .top-b {
+    &__title {
+      @include rem(19);
+    }
+  }
+}

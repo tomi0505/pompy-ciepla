@@ -16,6 +16,30 @@
 }
 //END BOOTSTRAP
 
+//HELPERS
+.pr-btn-b {
+  width: 286px;
+  height: 57px;
+  @include rem(19);
+  font-weight: 500;
+  background-color: $pr-color-2;
+
+  &::after {
+    content: url("images/arrow-down-long-solid.svg");
+    width: 12px;
+    height: 18px;
+    display: inline-block;
+    transform: rotate(180deg);
+    margin-left: 10px;
+  }
+
+  &:hover {
+    background-color: lighten($pr-color-2, 10);
+    transition: color .4s;
+  }
+}
+//END HELPERS
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: $white;
@@ -169,4 +193,39 @@ body {
     color: $sec-color-6;
     @include rem(14);
   }
+}
+
+.benefits-b {
+  background-color: $sec-color-7;
+
+  &__title {
+    @include rem(24);
+    font-family: 'Roboto Slab', serif;
+  }
+
+  &__highlight {
+    color: $pr-color-2;
+    font-weight: 700;
+  }
+}
+
+.benefits-box-b {
+  &__img-container {
+    max-width: 50px;
+  }
+
+  &__title {
+    @include rem(15);
+    color: $sec-color;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    @include rem(14);
+    color: $sec-color-6;
+  }
+}
+
+.footer-b {
+  background-color: $sec-color;
 }

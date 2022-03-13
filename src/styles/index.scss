@@ -41,3 +41,41 @@ body {
     }
   }
 }
+
+.safe-many-b {
+  @include bg('images/energia-direct-pompa-ciepla-wymierne-oszczednosci.jpg');
+  
+  &__title {
+    @include rem(24);
+    font-family: 'Roboto Slab', serif;
+  }
+
+  &__highlight {
+    color: $pr-color-2;
+    font-weight: 700;
+  }
+}
+
+.safe-many-box-b {
+  &__img-container {
+    @include center-grid();
+    width: 104px;
+    height: 104px;
+    background-color: $sec-color-4;
+  }
+
+  &__img-item {
+    max-width: 56px;
+  }
+
+  &__title {
+    font-family: 'Roboto Slab', serif;
+    @include rem(19);
+    color: $pr-color-2;
+  }
+
+  &__subtitle {
+    @include rem(15);
+    color: $sec-color-5;
+  }
+}

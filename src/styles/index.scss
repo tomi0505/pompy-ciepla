@@ -53,6 +53,10 @@ body {
   @include rem(17);
   font-family: 'Roboto Slab', serif;
 
+  &--m-font {
+    @include rem(22);
+  }
+
   &__highlight {
     color: $pr-color;
     font-weight: 700;
@@ -228,4 +232,39 @@ body {
 
 .footer-b {
   background-color: $sec-color;
+
+  &__content {
+    @include rem(14);
+    font-family: 'Roboto', serif;
+    color: $sec-color-5;
+  }
+}
+
+.footer-menu-b {
+  list-style-position: inside;
+  list-style-type: none;
+
+  &__link {
+    @include rem(14);
+    font-family: 'Roboto', serif;
+    color: $sec-color-5;
+
+    &:hover {
+      color: lighten($sec-color-5, 10);
+      transition: color .4s;
+    }
+
+    &::before {
+      content: url("images/angle-right-solid.svg");
+      margin-right: 10px;
+      display: inline-block;
+      width: 6px;
+    }
+  }
+}
+
+.copyright-b {
+  @include rem(12);
+  color: $sec-color-8;
+  border-top: 1px solid $sec-color-8;
 }

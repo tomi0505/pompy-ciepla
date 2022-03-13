@@ -2,9 +2,23 @@
 @import 'variables';
 @import 'mixins';
 
+//BOOTSTRAP
+.accordion-button {
+  &::after {
+    transform: rotate(-90deg);
+  }
+
+  &:not(.collapsed) {
+    &::after {
+      transform: rotate(0deg);
+    }
+  }
+}
+//END BOOTSTRAP
+
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: cadetblue;
+  background-color: $white;
 }
 
 .header-b {
@@ -77,5 +91,82 @@ body {
   &__subtitle {
     @include rem(15);
     color: $sec-color-5;
+  }
+}
+
+.que-buy-product-b {
+  &__title {
+    color: $sec-color;
+  }
+
+  &__highlight {
+    color: $pr-color-2;
+    font-weight: 700;
+  }
+
+  &__img-container {
+    max-width: 260px;
+  }
+}
+
+.accordion-item-b {
+  &:first-child {
+    border-top: 0;
+  }
+
+  $i: 1;
+  @while $i < 7 {
+    &:nth-child(#{$i}) {
+      .accordion-item-b__button {
+        &::before {
+          content: "#{$i}";
+          margin-right: 10px;
+          width: 24px;
+          height: 24px;
+          color: $white;
+
+          text-align: center;
+          line-height: 24px;
+          border-radius: 4px;
+          @include rem(14);
+        }
+      }
+    }
+    $i: $i + 1;
+  }
+
+  &__button {
+    padding: 15px 10px;
+    color: $pr-color-2 !important;
+    font-weight: 700;
+    background-color: transparent !important;
+    box-shadow: none !important;
+
+    &::before {
+      background-color: $pr-color-2;
+    }
+
+    &::after {
+      background-image: url('images/angle-down-solid.svg') !important;
+      background-repeat: no-repeat;
+      background-size: 10px;
+      background-position: center;
+    }
+  }
+
+  &__button.collapsed {
+    color: $sec-color !important;
+    @include rem(17);
+    font-weight: 700;
+
+    &::before {
+      background-color: $sec-color;
+    }
+  }
+
+  &__accordion-body {
+    padding: 0 45px 28px;
+    color: $sec-color-6;
+    @include rem(14);
   }
 }

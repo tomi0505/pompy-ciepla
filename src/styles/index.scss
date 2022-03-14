@@ -117,12 +117,75 @@ body {
   }
 }
 
-.our-offert-body-b {
+.our-offert-form-b {
   color: $sec-color;
 
   &__header {
     @include rem(17);
     font-weight: 700;
+  }
+
+  &__que {
+    @include rem(17);
+    font-weight: 500;
+  }
+
+  &__inputs-boxes-container {
+    justify-content: space-between;
+
+    @media(min-width: 330px) {
+      justify-content: start;
+    }
+  }
+
+  &__input-box-simple {
+    margin-bottom: 12px;
+
+    @media(min-width: 330px) {
+      margin-right: 12px;
+    }
+  }
+
+  &__svg {
+    max-width: 67px;
+
+    &--small {
+      max-width: 55px;
+    }
+  }
+
+  .checked_and_our-offert-form-b__label {
+    color: $pr-color !important;
+    border: 1px solid $pr-color !important;
+    background-color: $pr-color-4 !important;
+    box-shadow: none !important;
+
+    .our-offert-form-b__svg {
+      fill: $pr-color;
+    }
+  }
+
+  &__input {
+    &:checked + .our-offert-form-b__label {
+      @extend .checked_and_our-offert-form-b__label;
+    }
+  }
+
+  &__label {
+    width: 138px;
+    height: 120px;
+    color: $sec-color-3;
+    background-color: transparent;
+    border: 1px solid $sec-color-3;
+
+    &:active,
+    &:focus {
+      @extend .checked_and_our-offert-form-b__label;
+    }
+
+    .our-offert-form-b__svg {
+      fill: $sec-color-3;
+    }
   }
 }
 //END FORM

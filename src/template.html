@@ -28,14 +28,14 @@
 		<main>
 			<!--TABS START-->
 			<ul class="nav nav-pills mb-3 our-offert-nav-b" id="porownywarka-ofert" role="tablist">
-				<li class="nav-item w-100" role="presentation">
+				<li class="nav-item w-100 our-offert-nav-b__prev-tab-info-belt" role="presentation">
 					<button class="nav-link active rounded-0 w-100 our-offert-nav-b__step-belt" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Podstawowe informacje o pompie ciepła</button>
 				</li>
-				<li class="nav-item w-100 d-none" role="presentation">
-					<button class="nav-link rounded-0 w-100 our-offert-nav-b__step-belt our-offert-nav-b__step-belt--next-step" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Dane kontaktowe</button>
+				<li class="nav-item w-100 d-none our-offert-nav-b__next-tab-info-belt" role="presentation">
+					<button class="nav-link rounded-0 w-100 our-offert-nav-b__step-belt next-step-main-form-btn-b our-offert-nav-b__step-belt--next-step" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Dane kontaktowe</button>
 				</li>
 			</ul>
-			<form class="tab-content p-3 our-offert-form-b" id="pills-tabContent">
+			<form class="tab-content p-3 pt-0 our-offert-form-b" id="pills-tabContent">
 				<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 					<h5 class="our-offert-form-b__header">Wybierzemy dla Ciebie firmę, która dopasuje ofertę do Twoich warunków i potrzeb.</h5>
 					<div class="mb-3">
@@ -71,7 +71,7 @@
 						<h6 class="our-offert-form-b__que">Ile wynosi powierzchnia użytkowa domu?</h6>
 						<div class="input-group flex-nowrap">
 							<input type="number" name="powierzchnia-uzytkowa-domu" class="form-control default-input-b" aria-label="Ile wynosi powierzchnia użytkowa domu?" aria-describedby="addon-wrapping">
-							<span class="input-group-text" id="addon-wrapping">m<sup>2</sup></span>
+							<span class="input-group-text our-offert-form-b__addition-el" id="addon-wrapping">m<sup>2</sup></span>
 						</div>
 					</div>
 					<div class="mb-3">
@@ -110,8 +110,71 @@
 							</label>
 						</div>
 					</div>
+					<button type="button" class="btn my-2 d-flex justify-content-center align-items-center rounded-3 text-white text-center text-decoration-none d-block mx-auto pr-btn-b pr-btn-b--arrow-90" id="nextStepbBtn">Przejdź dalej</button>
 				</div>
-				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">b</div>
+				<!--NEXT STEP-->
+				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+					<h5 class="our-offert-form-b__header">Wybierzemy dla Ciebie firmę, która dopasuje ofertę do Twoich warunków i potrzeb.</h5>
+					<div class="mb-3">
+						<h6 class="our-offert-form-b__que">Imię i nazwisko</h6>
+						<div class="input-group flex-nowrap">
+							<input type="text" name="imie-i-nazwisko" class="form-control default-input-b" aria-label="Imię i nazwisko" aria-describedby="addon-wrapping">
+						</div>
+					</div>
+					<div class="mb-3">
+						<h6 class="d-flex our-offert-form-b__que">
+							Numer telefonu
+							<div class="ms-1 d-flex justify-content-center align-items-center info-tooltip-b" data-bs-toggle="tooltip" data-bs-placement="top" title="Treść tooltipa">
+								i
+							</div>
+						</h6>
+						<div class="input-group flex-nowrap">
+							<input type="tel" name="numer-telefonu" class="form-control default-input-b" aria-label="Numer telefonu" aria-describedby="addon-wrapping">
+						</div>
+					</div>
+					<div class="mb-3">
+						<h6 class="d-flex our-offert-form-b__que">
+							Adres e-mail
+							<div class="ms-1 d-flex justify-content-center align-items-center info-tooltip-b" data-bs-toggle="tooltip" data-bs-placement="top" title="Treść tooltipa">
+								i
+							</div>
+						</h6>
+						<div class="input-group flex-nowrap">
+							<input type="email" name="adres-email" class="form-control default-input-b" aria-label="Adres e-mail" aria-describedby="addon-wrapping">
+						</div>
+					</div>
+					<div class="mb-3">
+						<h6 class="d-flex our-offert-form-b__que">
+							Miejscowość
+							<div class="ms-1 d-flex justify-content-center align-items-center info-tooltip-b" data-bs-toggle="tooltip" data-bs-placement="top" title="Treść tooltipa">
+								i
+							</div>
+						</h6>
+						<div class="input-group flex-nowrap">
+							<input type="text" name="miejscowosc" class="form-control default-input-b" aria-label="Miejscowość" aria-describedby="addon-wrapping">
+						</div>
+					</div>
+					<div class="form-check my-3 d-flex rodo-b">
+						<input class="form-check-input me-2 flex-shrink-0 md-height-b our-offert-form-b__custom-checkbox" type="checkbox" name="rodo" value="" id="rodo">
+						<label class="form-check-label our-offert-form-b__custom-checkbox-label" for="rodo">
+							<div class="accordion" id="accordionPanelsStayOpenExample">
+								<div class="accordion-item border-0">
+									<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+										<div class="accordion-body pt-0 pb-2 ps-1 rodo-b__content">
+											Wyrażam zgodę na przetwarzanie moich danych osobowych przez Ekosynergia Sp. z o.o. z siedzibą we Wrocławiu (50-082) przy ul. Nowa 4/4, zarejestrowaną w KRS: 0000361877, nr NIP: 6222742981, nr REGON: 301498990 w celu realizacji współpracy określonej w Regulaminie przez Spółkę lub współpracujących z nią partnerów biznesowych. Administratorem Danych Osobowych jest Ekosynergia Sp. z o.o. Jestem świadomy(a) przysługującego mi prawa dostępu do treści moich danych, możliwości ich poprawiania oraz tego, że moja zgoda może być odwołana w każdym czasie, co skutkować będzie usunięciem moich danych.
+										</div>
+									</div>
+									<div class="accordion-header" id="panelsStayOpen-headingOne">
+										<button class="accordion-button py-0 ps-1 bg-transparent rodo-b__hide-content-btn" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+											zwiń
+										</button>
+									</div>
+								</div>
+							</div>
+						</label>
+					</div>
+					<button name="submit-form-btn" class="btn my-2 d-flex justify-content-center align-items-center rounded-3 text-white text-center text-decoration-none d-block mx-auto pr-btn-b pr-btn-b--arrow-90">Prześlij formularz</button>
+				</div>
 			</form>
 			<!--TABS END-->
 			<div class="container-fluid text-center py-4 px-3 safe-many-b">

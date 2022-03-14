@@ -33,17 +33,31 @@
     margin-left: 10px;
   }
 
+  &:active,
+  &:focus {
+    box-shadow: none !important;
+  }
+
   &:hover {
     background-color: lighten($pr-color-2, 10);
     transition: color .4s;
+  }
+
+  &--arrow-90 {
+    &::after {
+      transform: rotate(-90deg);
+    }
   }
 }
 
 .default-input-b {
   height: 50px;
+  color: $sec-color;
+  @include rem(16);
 
   &:active,
   &:focus {
+    border-color: $sec-color;
     box-shadow: none !important;
   }
 }
@@ -51,6 +65,15 @@
 .md-height-b {
   width: 26px;
   height: 26px;
+}
+
+.info-tooltip-b {
+  width: 18px;
+  height: 18px;
+  color: $white;
+  font-size: 15px;
+  background-color: $sec-color-11;
+  border-radius: 50%;
 }
 //END HELPERS
 
@@ -142,6 +165,11 @@ body {
   &__que {
     @include rem(17);
     font-weight: 500;
+  }
+
+  &__addition-el {
+    color: $sec-color-3;
+    background-color: $sec-color-9;
   }
 
   &__inputs-boxes-container {
@@ -255,6 +283,30 @@ body {
 
   &__custom-radio-label {
     margin-top: 3px;
+  }
+}
+
+.rodo-b {
+  &__content {
+    font-size: 12px;
+    font-weight: normal;
+    color: $sec-color-6;
+  }
+
+  &__hide-content-btn {
+    font-size: 12px;
+    font-weight: 500;
+    color: $sec-color !important;
+    box-shadow: none !important;
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+    }
+
+    &::after {
+      content: none;
+    }
   }
 }
 //END FORM

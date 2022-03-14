@@ -84,6 +84,49 @@ body {
   }
 }
 
+//START FORM
+.our-offert-nav-b {
+  &__step-belt {
+    display: flex;
+    align-items: center;
+    @include rem(14);
+    font-weight: 500;
+    color: $pr-color-2 !important;
+    text-align: left;
+    background-color: $pr-color-3 !important;
+
+    &::before {
+      content: '1';
+      margin-right: 7px;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      color: $white;
+      line-height: 24px;
+      text-align: center;
+      border-radius: 4px;
+      @include rem(14);
+      background-color: $pr-color-2;
+    }
+
+    &--next-step {
+      &::before {
+        content: '2';
+      }
+    }
+  }
+}
+
+.our-offert-body-b {
+  color: $sec-color;
+
+  &__header {
+    @include rem(17);
+    font-weight: 700;
+  }
+}
+//END FORM
+
 .safe-many-b {
   @include bg('images/energia-direct-pompa-ciepla-wymierne-oszczednosci.jpg');
   
@@ -152,7 +195,6 @@ body {
           width: 24px;
           height: 24px;
           color: $white;
-
           text-align: center;
           line-height: 24px;
           border-radius: 4px;

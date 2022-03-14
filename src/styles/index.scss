@@ -38,6 +38,20 @@
     transition: color .4s;
   }
 }
+
+.default-input-b {
+  height: 50px;
+
+  &:active,
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.md-height-b {
+  width: 26px;
+  height: 26px;
+}
 //END HELPERS
 
 body {
@@ -186,6 +200,61 @@ body {
     .our-offert-form-b__svg {
       fill: $sec-color-3;
     }
+  }
+
+  &__custom-checkbox-label {
+    margin-top: 5px;
+    @include rem(17);
+    font-weight: 500;
+    color: $sec-color;
+  }
+
+  &__custom-checkbox {
+    &:checked {
+      background-color: $pr-color;
+      border-color: $pr-color;
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &__custom-radio-container {
+    height: 50px;
+    color: $sec-color-3;
+    border: 1px solid $sec-color-3;
+    @include rem(14);
+    font-weight: 500;
+
+    &:focus {
+      background-color: $pr-color-4;
+    }
+  }
+
+  &__custom-radio {
+    margin-right: 15px;
+    width: 21px;
+    height: 21px;
+
+    &:checked {
+      background-color: $white;
+      border-color: $pr-color;
+
+      &[type=radio] {
+        background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%272%27 fill=%27%233FAC2B%27/%3e%3c/svg%3e");
+      }
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &__custom-radio-label {
+    margin-top: 3px;
   }
 }
 //END FORM

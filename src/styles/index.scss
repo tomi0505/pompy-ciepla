@@ -108,6 +108,14 @@ body {
 
 .phone-b {
   @include rem(15);
+
+  &::after {
+    content: url("images/infolinia.svg");
+    margin-left: 10px;
+    display: inline-block;
+    width: 25px;
+    line-height: 0;
+  }
 }
 
 .top-b {

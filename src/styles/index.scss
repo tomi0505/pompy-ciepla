@@ -665,6 +665,10 @@ body {
     @include rem(14);
     font-family: 'Roboto', serif;
     color: $sec-color-5;
+
+    @media(min-width: 768px) {
+      @include rem(15);
+    }
   }
 }
 
@@ -676,6 +680,10 @@ body {
     @include rem(14);
     font-family: 'Roboto', serif;
     color: $sec-color-5;
+
+    @media(min-width: 768px) {
+      @include rem(15);
+    }
 
     &:hover {
       color: lighten($sec-color-5, 10);

@@ -267,6 +267,11 @@ body {
     &:focus {
       background-color: $pr-color-4;
     }
+
+    &--active-bg-js {
+      border-color: $pr-color;
+      background-color: $pr-color-4;
+    }
   }
 
   &__custom-radio {

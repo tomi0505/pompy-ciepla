@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const prevTabInfoBelt = document.querySelector('.our-offert-nav-b__prev-tab-info-belt');
   const nextTabInfoBelt = document.querySelector('.our-offert-nav-b__next-tab-info-belt');
+  const nextStepBeltEl = document.querySelector('.our-offert-nav-b__step-belt--next-step');
+  const prevStepBeltEl = document.querySelector('.our-offert-nav-b__step-belt--prev-step');
 
   const customRadioEls = document.querySelectorAll('.our-offert-form-b__custom-radio');
 
@@ -41,6 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
   nextStepMainFormBtn.addEventListener('click', function() {
     const nextStepMainFormTabBtn = document.querySelector('.next-step-main-form-btn-b');
     const nextStepMainFormTab = new bootstrap.Tab(nextStepMainFormTabBtn);
+
+    nextStepBeltEl.classList.remove('our-offert-nav-b__step-belt--disabled');
+    prevStepBeltEl.classList.add('our-offert-nav-b__step-belt--done');
 
     prevTabInfoBelt.classList.add('d-none');
     nextTabInfoBelt.classList.remove('d-none');

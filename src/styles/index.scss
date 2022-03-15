@@ -3,6 +3,10 @@
 @import 'mixins';
 
 //BOOTSTRAP
+.container {
+  max-width: 950px !important;
+}
+
 .accordion-button {
   &::after {
     transform: rotate(-90deg);
@@ -52,6 +56,14 @@
   &--arrow-90 {
     &::after {
       transform: rotate(-90deg);
+    }
+  }
+
+  &--biggest {
+    @media(min-width: 768px) {
+      width: 360px;
+      height: 70px;
+      justify-content: center;
     }
   }
 }

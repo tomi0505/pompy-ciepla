@@ -458,11 +458,21 @@ body {
   &__title {
     @include rem(24);
     font-family: 'Roboto Slab', serif;
+
+    @media(min-width: 768px) {
+      @include rem(40);
+    }
   }
 
   &__highlight {
     color: $pr-color-2;
     font-weight: 700;
+  }
+
+  &__sub-title {
+    @media(min-width: 768px) {
+      @include rem(23);
+    }
   }
 }
 
@@ -482,6 +492,7 @@ body {
     font-family: 'Roboto Slab', serif;
     @include rem(19);
     color: $pr-color-2;
+    font-weight: 600;
   }
 
   &__subtitle {

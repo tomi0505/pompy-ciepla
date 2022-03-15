@@ -35,7 +35,7 @@
 					<button class="nav-link rounded-0 w-100 our-offert-nav-b__step-belt next-step-main-form-btn-b our-offert-nav-b__step-belt--next-step" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Dane kontaktowe</button>
 				</li>
 			</ul>
-			<form class="tab-content p-3 pt-0 our-offert-form-b" id="pills-tabContent">
+			<form method="get" class="tab-content p-3 py-0 overflow-hidden our-offert-form-b" id="pills-tabContent">
 				<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 					<h5 class="our-offert-form-b__header">Wybierzemy dla Ciebie firmę, która dopasuje ofertę do Twoich warunków i potrzeb.</h5>
 					<div class="mb-3">
@@ -110,7 +110,79 @@
 							</label>
 						</div>
 					</div>
-					<button type="button" class="btn my-2 d-flex justify-content-center align-items-center rounded-3 text-white text-center text-decoration-none d-block mx-auto pr-btn-b pr-btn-b--arrow-90" id="nextStepbBtn">Przejdź dalej</button>
+					<div class="mb-3">
+						<h6 class="our-offert-form-b__que">Jaki jest układ instalacji elektrycznej?</h6>
+						<div class="form-check rounded mb-2 d-flex align-items-center our-offert-form-b__custom-radio-container">
+							<input class="form-check-input ms-1 our-offert-form-b__custom-radio" type="radio" name="uklad-instalacji-elektrycznej" id="uklad1Faza" value="1-fazowy" checked>
+							<label class="form-check-label d-flex flex-grow-1 align-items-center h-100 our-offert-form-b__custom-radio-label" for="uklad1Faza">
+								1-fazowy
+							</label>
+						</div>
+						<div class="form-check rounded mb-2 d-flex align-items-center our-offert-form-b__custom-radio-container">
+							<input class="form-check-input ms-1 our-offert-form-b__custom-radio" type="radio" name="uklad-instalacji-elektrycznej" id="uklad3Faza" value="3-fazowy">
+							<label class="form-check-label d-flex flex-grow-1 align-items-center h-100 our-offert-form-b__custom-radio-label" for="uklad3Faza">
+								3-fazowy
+							</label>
+						</div>
+					</div>
+					<div class="mb-3">
+						<h6 class="our-offert-form-b__que">Na kiedy planujesz instalację pompy ciepła?</h6>
+						<div class="form-check rounded mb-2 d-flex align-items-center our-offert-form-b__custom-radio-container">
+							<input class="form-check-input ms-1 our-offert-form-b__custom-radio" type="radio" name="data-instalacji-pompy" id="teraz" value="teraz" checked>
+							<label class="form-check-label d-flex flex-grow-1 align-items-center h-100 our-offert-form-b__custom-radio-label" for="teraz">
+								Teraz
+							</label>
+						</div>
+						<div class="form-check rounded mb-2 d-flex align-items-center our-offert-form-b__custom-radio-container">
+							<input class="form-check-input ms-1 our-offert-form-b__custom-radio" type="radio" name="data-instalacji-pompy" id="zaKwartal" value="za-kwartal" checked>
+							<label class="form-check-label d-flex flex-grow-1 align-items-center h-100 our-offert-form-b__custom-radio-label" for="zaKwartal">
+								Za kwartał
+							</label>
+						</div>
+						<div class="form-check rounded mb-2 d-flex align-items-center our-offert-form-b__custom-radio-container">
+							<input class="form-check-input ms-1 our-offert-form-b__custom-radio" type="radio" name="data-instalacji-pompy" id="zaPolRoku" value="za-pol-roku" checked>
+							<label class="form-check-label d-flex flex-grow-1 align-items-center h-100 our-offert-form-b__custom-radio-label" for="zaPolRoku">
+								Za pół roku
+							</label>
+						</div>
+						<div class="form-check rounded mb-2 d-flex align-items-center our-offert-form-b__custom-radio-container">
+							<input class="form-check-input ms-1 our-offert-form-b__custom-radio" type="radio" name="data-instalacji-pompy" id="zaRok" value="za-rok" checked>
+							<label class="form-check-label d-flex flex-grow-1 align-items-center h-100 our-offert-form-b__custom-radio-label" for="zaRok">
+								Za rok
+							</label>
+						</div>
+					</div>
+					<div class="mb-3">
+						<h6 class="our-offert-form-b__que">Czy pompa ciepła ma działać z fotowoltaiką?</h6>
+						<div class="form-check rounded mb-2 d-flex align-items-center our-offert-form-b__custom-radio-container">
+							<input class="form-check-input ms-1 our-offert-form-b__custom-radio" type="radio" name="dzialanie-pompy-z-fotowoltaika" id="pompaIFotowoltaikaTak" value="tak" checked>
+							<label class="form-check-label d-flex flex-grow-1 align-items-center h-100 our-offert-form-b__custom-radio-label" for="pompaIFotowoltaikaTak">
+								Tak
+							</label>
+						</div>
+						<div class="form-check rounded mb-2 d-flex align-items-center our-offert-form-b__custom-radio-container">
+							<input class="form-check-input ms-1 our-offert-form-b__custom-radio" type="radio" name="dzialanie-pompy-z-fotowoltaika" id="pompaIFotowoltaikaTakNie" value="nie">
+							<label class="form-check-label d-flex flex-grow-1 align-items-center h-100 our-offert-form-b__custom-radio-label" for="pompaIFotowoltaikaTakNie">
+								Nie
+							</label>
+						</div>
+					</div>
+					<div class="mb-3">
+						<h6 class="our-offert-form-b__que">Jaki rodzaj finansowania planujesz?</h6>
+						<div class="form-check rounded mb-2 d-flex align-items-center our-offert-form-b__custom-radio-container">
+							<input class="form-check-input ms-1 our-offert-form-b__custom-radio" type="radio" name="rodzaj-finansowania" id="rodzajFinansowaniaWlasne" value="wlasne" checked>
+							<label class="form-check-label d-flex flex-grow-1 align-items-center h-100 our-offert-form-b__custom-radio-label" for="rodzajFinansowaniaWlasne">
+								Własne
+							</label>
+						</div>
+						<div class="form-check rounded mb-2 d-flex align-items-center our-offert-form-b__custom-radio-container">
+							<input class="form-check-input ms-1 our-offert-form-b__custom-radio" type="radio" name="rodzaj-finansowania" id="rodzajFinansowaniaKredyt" value="kredyt">
+							<label class="form-check-label d-flex flex-grow-1 align-items-center h-100 our-offert-form-b__custom-radio-label" for="rodzajFinansowaniaKredyt">
+								Kredyt
+							</label>
+						</div>
+					</div>
+					<button type="button" class="btn my-4 d-flex justify-content-center align-items-center rounded-3 text-white text-center text-decoration-none d-block mx-auto pr-btn-b pr-btn-b--arrow-90" id="nextStepbBtn">Przejdź dalej</button>
 				</div>
 				<!--NEXT STEP-->
 				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -173,7 +245,7 @@
 							</div>
 						</label>
 					</div>
-					<button name="submit-form-btn" class="btn my-2 d-flex justify-content-center align-items-center rounded-3 text-white text-center text-decoration-none d-block mx-auto pr-btn-b pr-btn-b--arrow-90">Prześlij formularz</button>
+					<button name="submit-form-btn" class="btn my-4 d-flex justify-content-center align-items-center rounded-3 text-white text-center text-decoration-none d-block mx-auto pr-btn-b pr-btn-b--arrow-90">Prześlij formularz</button>
 				</div>
 			</form>
 			<!--TABS END-->

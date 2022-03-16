@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const prevStepBeltEl = document.querySelector('.our-offert-nav-b__step-belt--prev-step');
 
   const customRadioEls = document.querySelectorAll('.our-offert-form-b__custom-radio');
+  const mainFormBodyStartEl = document.querySelector('#planujesz-montaz-pompy-ciepla');
 
   for(const radioInput of customRadioEls) {
     const radioInputContainerEl = radioInput.closest('.our-offert-form-b__custom-radio-container');
@@ -51,5 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
     nextTabInfoBelt.classList.remove('d-none');
 
     nextStepMainFormTab.show();
+    // mainFormBodyStartEl.scrollIntoView();
   });
 });
